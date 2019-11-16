@@ -107,7 +107,7 @@ TEST(shared_ptr, test6)//+
     ASSERT_EQ(ptr2.use_count(), 1);
 }
 
-
+    
 
 TEST(shared_ptr, test8_bool_check)//+
 {
