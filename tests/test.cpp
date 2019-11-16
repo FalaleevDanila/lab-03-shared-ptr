@@ -107,7 +107,7 @@ TEST(shared_ptr, test6)//+
     ASSERT_EQ(ptr2.use_count(), 1);
 }
 
-    
+
 
 TEST(shared_ptr, test8_bool_check)//+
 {
@@ -170,18 +170,6 @@ TEST(shared_ptr, test11)//+
     ASSERT_EQ(ptr.use_count(), 1);
 }
 
-TEST(shared_ptr, test12)//+
-{
-    int d = 0;
-    int* c = &d;
-    SharedPtr ptr(c);
-
-    ASSERT_EQ(*(ptr.get()), 0);
-
-    ASSERT_EQ(bool(ptr), true);
-
-    ASSERT_EQ(ptr.use_count(), 1);
-}
 
 TEST(shared_ptr, test13)//+
 {
