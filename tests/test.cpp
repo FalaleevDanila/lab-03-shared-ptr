@@ -107,42 +107,7 @@ TEST(shared_ptr, test6)//+
     ASSERT_EQ(ptr2.use_count(), 1);
 }
 
-TEST(shared_ptr, test7)//+
-{
-    SharedPtr ptr(new int{5});
 
-    ASSERT_EQ(*(ptr.get()), 5);
-
-    ASSERT_EQ(bool(ptr), true);
-
-    ASSERT_EQ(ptr.use_count(), 1);
-
-
-
-    SharedPtr ptr2(ptr);
-
-
-
-    ASSERT_EQ(*(ptr2.get()), 5);
-
-    ASSERT_EQ(bool(ptr2), true);
-
-    ASSERT_EQ(ptr.use_count(), ptr2.use_count());
-
-    ASSERT_EQ(ptr.use_count(), 2);
-
-
-
-    ptr.~SharedPtr();
-
-
-
-    ASSERT_EQ(*(ptr2.get()), 5);
-
-    ASSERT_EQ(bool(ptr2), true);
-
-    ASSERT_EQ(ptr2.use_count(), 1);
-}
 
 TEST(shared_ptr, test8_bool_check)//+
 {
