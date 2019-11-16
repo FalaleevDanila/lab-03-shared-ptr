@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/header.hpp
+cstddef
+-
+atomic
+-
+
+/home/danila/CLionProjects/lab-03-shared-ptr/sources/source.cpp
+header.hpp
+-
+
